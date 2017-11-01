@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/road"
     android:orientation="vertical"
-    tools:context="com.rentcentric.mobileagent.LoginActivity">
+    tools:context="com.rentcentric.mobileagent.Activities.LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,9 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/ic_mail_black_24dp"
             android:drawablePadding="5dp"
-            android:hint="@string/username"
+            android:hint="@string/email"
             android:textColor="#fff"
             android:textColorHint="#fff" />
 
