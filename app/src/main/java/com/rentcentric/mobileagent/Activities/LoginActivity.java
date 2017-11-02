@@ -33,8 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.passwordET);
         loginIcon = (ImageView) findViewById(R.id.loginIcon);
 
-        mail.setText("selfservice@rentcentric.com");
-        password.setText("fall2015");
+        mail.setText("hesham.mohammed@rentcentric.com");
+        password.setText("Rent45");
 
         loginIcon.setOnClickListener(new View.OnClickListener() {
             @Override
