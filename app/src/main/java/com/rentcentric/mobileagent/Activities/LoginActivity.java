@@ -30,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
+
         mail = (EditText) findViewById(R.id.mailET);
         password = (EditText) findViewById(R.id.passwordET);
         loginIcon = (ImageView) findViewById(R.id.loginIcon);
