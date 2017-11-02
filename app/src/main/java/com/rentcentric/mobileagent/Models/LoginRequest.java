@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models.Requests;
+package com.rentcentric.mobileagent.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,17 +7,17 @@ import com.google.gson.annotations.SerializedName;
  * Created by Mohamed.Mohsen on 01-11-17.
  */
 
-public class Login {
+public class LoginRequest {
 
     @SerializedName("Email")
     @Expose
     private String email;
     @SerializedName("MobileServicePassword")
     @Expose
-    private String mobileServicePassword;
+    private String mobileServicePassword="dr0w$$ap";
     @SerializedName("MobileServiceUserName")
     @Expose
-    private String mobileServiceUserName;
+    private String mobileServiceUserName="dr0w$$ap";
     @SerializedName("Password")
     @Expose
     private String password;

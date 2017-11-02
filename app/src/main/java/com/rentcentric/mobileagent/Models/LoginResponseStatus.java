@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models.Responses;
+package com.rentcentric.mobileagent.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by Mohamed.Mohsen on 01-11-17.
  */
 
-public class LoginStatus {
+public class LoginResponseStatus {
 
     @SerializedName("Description")
     @Expose

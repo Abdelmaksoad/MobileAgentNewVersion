@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models.Responses;
+package com.rentcentric.mobileagent.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by Mohamed.Mohsen on 01-11-17.
  */
 
-public class Login {
+public class LoginResponse {
 
     @SerializedName("ClientID")
     @Expose
@@ -17,7 +17,7 @@ public class Login {
     private String serverName;
     @SerializedName("Status")
     @Expose
-    private LoginStatus status;
+    private LoginResponseStatus status;
 
     public Integer getClientID() {
         return clientID;
@@ -35,11 +35,11 @@ public class Login {
         this.serverName = serverName;
     }
 
-    public LoginStatus getStatus() {
+    public LoginResponseStatus getStatus() {
         return status;
     }
 
-    public void setStatus(LoginStatus status) {
+    public void setStatus(LoginResponseStatus status) {
         this.status = status;
     }
 }

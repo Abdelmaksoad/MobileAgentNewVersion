@@ -9,13 +9,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
 
-    public static Retrofit retrofit;
+    public static Retrofit retrofit = null;
 
-    public static Retrofit getService (){
-        retrofit =new Retrofit.Builder()
-                .baseUrl("https://www5.rentcentric.com/Portal_Service/PortalService.svc/help/operations/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+    public static Retrofit getService() {
+        if (retrofit == null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl("https://www5.rentcentric.com/Portal_Service/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
         return retrofit;
     }
 }
