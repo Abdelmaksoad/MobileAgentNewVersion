@@ -29,7 +29,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/usernameET"
+            android:id="@+id/mailET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -52,7 +52,7 @@
             android:textColorHint="#fff" />
 
         <ImageView
-            android:id="@+id/loginBTN"
+            android:id="@+id/loginIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -63,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:singleLine="true"
             android:text="@string/forgotyourpassword"
             android:textColor="#fff"

@@ -14,7 +14,7 @@ public class RetrofitService {
     public static Retrofit getService() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://www5.rentcentric.com/Portal_Service/")
+                    .baseUrl("https://www5.rentcentric.com/Portal_Service/PortalService.svc/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
