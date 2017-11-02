@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-
+//55
 
         mail = (EditText) findViewById(R.id.mailET);
         password = (EditText) findViewById(R.id.passwordET);
