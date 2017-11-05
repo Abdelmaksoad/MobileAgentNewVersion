@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models;
+package com.rentcentric.mobileagent.Models.Requests;
 
 import android.os.Parcel;
 import android.os.Parcelable;

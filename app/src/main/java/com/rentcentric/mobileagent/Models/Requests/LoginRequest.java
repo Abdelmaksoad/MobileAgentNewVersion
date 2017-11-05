@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models;
+package com.rentcentric.mobileagent.Models.Requests;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -17,10 +17,10 @@ public class LoginRequest implements Parcelable {
     private String email;
     @SerializedName("MobileServicePassword")
     @Expose
-    private String mobileServicePassword="dr0w$$ap";
+    private String mobileServicePassword = "dr0w$$ap";
     @SerializedName("MobileServiceUserName")
     @Expose
-    private String mobileServiceUserName="dr0w$$ap";
+    private String mobileServiceUserName = "dr0w$$ap";
     @SerializedName("Password")
     @Expose
     private String password;

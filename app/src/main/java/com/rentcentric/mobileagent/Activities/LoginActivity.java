@@ -9,15 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rentcentric.mobileagent.Models.AdminLoginRequest;
-import com.rentcentric.mobileagent.Models.AdminLoginResponse;
-import com.rentcentric.mobileagent.Models.LoginRequest;
-import com.rentcentric.mobileagent.Models.LoginResponse;
+import com.rentcentric.mobileagent.Models.Requests.AdminLoginRequest;
+import com.rentcentric.mobileagent.Models.Responses.AdminLoginResponse;
+import com.rentcentric.mobileagent.Models.Requests.LoginRequest;
+import com.rentcentric.mobileagent.Models.Responses.LoginResponse;
 import com.rentcentric.mobileagent.Network.RestAPI;
 import com.rentcentric.mobileagent.Network.RetrofitService;
 import com.rentcentric.mobileagent.R;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
     ImageView loginIcon;
     TextView forgot;
     RestAPI restAPI;
-    RestAPI restAPIaaaaaaaaaaa;
     String id;
 
     @Override
@@ -39,8 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         mail = (EditText) findViewById(R.id.mailET);
         password = (EditText) findViewById(R.id.passwordET);
         loginIcon = (ImageView) findViewById(R.id.loginIcon);
-        forgot=(TextView)findViewById(R.id.forgotPassword);
-
+        forgot = (TextView) findViewById(R.id.forgotPassword);
 
         mail.setText("hesham.mohammed@rentcentric.com");
         password.setText("Rent45");
@@ -48,16 +45,9 @@ public class LoginActivity extends AppCompatActivity {
         loginIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RetrofitService.www = "www5";
-                RetrofitService.client = "6470";
+//                RetrofitService.www = "www5";
+//                RetrofitService.client = "6470";
                 LoginCall();
-            }
-        });
-
-        forgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AdminLoginCall();
             }
         });
     }
@@ -69,10 +59,14 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if (response.body().getStatus().getStatusCode().equals("0")) {
+                    RetrofitService.www = response.body().getServerName().toString();
+                    RetrofitService.client = response.body().getClientID().toString();
+                    AdminLoginCall(RetrofitService.client);
+                } else {
+                    Toast.makeText(LoginActivity.this, response.body().getStatus().getDescription(), Toast.LENGTH_SHORT).show();
+                }
                 id = response.body().getClientID().toString();
-//                RetrofitService.www = response.body().getServerName().toString();
-//                RetrofitService.client = response.body().getClientID().toString();
-                Toast.makeText(LoginActivity.this, id, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -82,10 +76,10 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void AdminLoginCall() {
-        restAPIaaaaaaaaaaa = RetrofitService.getService().create(RestAPI.class);
-        AdminLoginRequest adminLoginRequest = new AdminLoginRequest(mail.getText().toString(), "6470", password.getText().toString());
-        Call<AdminLoginResponse> adminCall = restAPIaaaaaaaaaaa.adminLogin(adminLoginRequest);
+    private void AdminLoginCall(String ClientID) {
+        restAPI = RetrofitService.getService().create(RestAPI.class);
+        AdminLoginRequest adminLoginRequest = new AdminLoginRequest(mail.getText().toString(), ClientID, password.getText().toString());
+        Call<AdminLoginResponse> adminCall = restAPI.adminLogin(adminLoginRequest);
 
         adminCall.enqueue(new Callback<AdminLoginResponse>() {
             @Override

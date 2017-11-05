@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models;
+package com.rentcentric.mobileagent.Models.Responses;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

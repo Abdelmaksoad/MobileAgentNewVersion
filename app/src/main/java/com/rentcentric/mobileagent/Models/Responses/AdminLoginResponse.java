@@ -1,4 +1,4 @@
-package com.rentcentric.mobileagent.Models;
+package com.rentcentric.mobileagent.Models.Responses;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -26,7 +26,7 @@ public class AdminLoginResponse {
     private Integer locationID;
     @SerializedName("StatusInfo")
     @Expose
-    private Status statusInfo;
+    private ResponseStatus statusInfo;
 
     public String getAdminId() {
         return adminId;
@@ -68,11 +68,11 @@ public class AdminLoginResponse {
         this.locationID = locationID;
     }
 
-    public Status getStatusInfo() {
+    public ResponseStatus getStatusInfo() {
         return statusInfo;
     }
 
-    public void setStatusInfo(Status statusInfo) {
+    public void setStatusInfo(ResponseStatus statusInfo) {
         this.statusInfo = statusInfo;
     }
 }
