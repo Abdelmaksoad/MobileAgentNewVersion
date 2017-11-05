@@ -36,8 +36,8 @@
             android:drawableLeft="@drawable/ic_mail_black_24dp"
             android:drawablePadding="5dp"
             android:hint="@string/email"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
 
         <EditText
             android:id="@+id/passwordET"
@@ -48,8 +48,8 @@
             android:drawablePadding="5dp"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
 
         <ImageView
             android:id="@+id/loginIcon"
@@ -66,7 +66,7 @@
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:text="@string/forgotyourpassword"
-            android:textColor="#fff"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp" />
 
     </LinearLayout>

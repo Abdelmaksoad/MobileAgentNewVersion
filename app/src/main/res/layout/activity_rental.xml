@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF"
+    android:background="@color/colorWhite"
     tools:context="com.rentcentric.mobileagent.Activities.RentalActivity">
 
     <ImageView
@@ -27,8 +27,6 @@
             android:background="@drawable/tab"
             android:orientation="horizontal">
 
-
-
             <TextView
                 android:id="@+id/checkin"
                 android:layout_width="match_parent"
@@ -39,8 +37,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingBottom="16dp"
-                android:text="CHECK IN"
-                android:textColor="#fff"
+                android:text="@string/chechin"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
 
             <TextView
@@ -53,8 +51,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingBottom="16dp"
-                android:text="CHECK OUT"
-                android:textColor="#fff"
+                android:text="@string/chechout"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
 
         </LinearLayout>

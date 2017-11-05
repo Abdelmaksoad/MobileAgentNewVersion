@@ -3,5 +3,10 @@
     <string name="email">E-Mail</string>
     <string name="password">Password</string>
     <string name="forgotyourpassword">Forgot Your Password?</string>
+    <string name="chechin">CHECK IN</string>
+    <string name="chechout">CHECK OUT</string>
+    <string name="reservation">Reservation #</string>
+    <string name="rental">Rental #</string>
+    <string name="next">Next</string>
 
 </resources>

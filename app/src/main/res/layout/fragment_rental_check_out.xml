@@ -19,7 +19,7 @@
             android:background="@drawable/edittext"
             android:drawableLeft="@drawable/ic_account_circle_black_24dp"
             android:drawablePadding="5dp"
-            android:hint="Rental #"
+            android:hint="@string/rental"
             android:padding="10dp" />
     </RelativeLayout>
 
@@ -34,7 +34,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/btn"
-            android:text="Next"
-            android:textColor="#fff" />
+            android:text="@string/next"
+            android:textColor="@color/colorWhite" />
     </RelativeLayout>
 </LinearLayout>
