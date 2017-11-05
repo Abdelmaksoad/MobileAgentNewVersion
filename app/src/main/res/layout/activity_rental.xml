@@ -27,6 +27,8 @@
             android:background="@drawable/tab"
             android:orientation="horizontal">
 
+
+
             <TextView
                 android:id="@+id/checkin"
                 android:layout_width="match_parent"
