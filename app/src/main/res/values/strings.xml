@@ -8,5 +8,6 @@
     <string name="reservation">Reservation #</string>
     <string name="rental">Rental #</string>
     <string name="next">Next</string>
+    <string name="server_connection_error">Sorry! We\'re unable to connect to the server.</string>
 
 </resources>

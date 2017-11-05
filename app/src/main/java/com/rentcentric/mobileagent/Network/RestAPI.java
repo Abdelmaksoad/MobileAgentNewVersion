@@ -2,6 +2,8 @@ package com.rentcentric.mobileagent.Network;
 
 import android.database.Observable;
 
+import com.rentcentric.mobileagent.Models.AdminLoginRequest;
+import com.rentcentric.mobileagent.Models.AdminLoginResponse;
 import com.rentcentric.mobileagent.Models.LoginRequest;
 import com.rentcentric.mobileagent.Models.LoginResponse;
 
@@ -16,6 +18,9 @@ import retrofit2.http.POST;
 
 public interface RestAPI {
 
-    @POST ("MobileUserLogin")
+    @POST("MobileUserLogin")
     Call<LoginResponse> login(@Body LoginRequest loginRequest);
+
+    @POST("AdminLogin")
+    Call<AdminLoginResponse> adminLogin(@Body AdminLoginRequest adminLoginRequest);
 }
