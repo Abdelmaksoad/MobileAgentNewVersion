@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -51,24 +52,27 @@
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite" />
 
-        <ImageView
-            android:id="@+id/loginIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <at.markushi.ui.CircleButton
+            android:id="@+id/login"
+            android:layout_width="75dip"
+            android:layout_height="75dip"
             android:layout_gravity="center"
-            android:src="@drawable/login_btn" />
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_navigate_next_black_24dp"
+            app:cb_color="@color/colorWhite"
+            app:cb_pressedRingWidth="8dip"
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:id="@+id/forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_margin="30dp"
             android:singleLine="true"
             android:text="@string/forgotyourpassword"
             android:textColor="@color/colorWhite"
             android:textSize="16sp" />
 
     </LinearLayout>
-
 </LinearLayout>

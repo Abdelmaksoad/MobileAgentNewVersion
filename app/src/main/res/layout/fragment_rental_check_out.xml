@@ -19,7 +19,7 @@
             android:background="@drawable/edittext"
             android:drawableLeft="@drawable/ic_account_circle_black_24dp"
             android:drawablePadding="5dp"
-            android:hint="@string/rental"
+            android:hint="@string/reservation"
             android:padding="10dp" />
     </RelativeLayout>
 

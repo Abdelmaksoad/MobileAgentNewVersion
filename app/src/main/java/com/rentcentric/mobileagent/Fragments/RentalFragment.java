@@ -1,27 +1,26 @@
-package com.rentcentric.mobileagent.Activities;
+package com.rentcentric.mobileagent.Fragments;
 
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.rentcentric.mobileagent.Fragments.RentalCheckInFragment;
-import com.rentcentric.mobileagent.Fragments.RentalCheckOutFragment;
 import com.rentcentric.mobileagent.R;
 
-public class RentalActivity extends AppCompatActivity {
+public class RentalFragment extends Fragment {
 
     TextView Checkin, Checkout;
     boolean in = true, out;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rental);
-        Checkin = (TextView) findViewById(R.id.checkin);
-        Checkout = (TextView) findViewById(R.id.checkout);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_rental, container, false);
+
+        Checkin = (TextView) view.findViewById(R.id.checkin);
+        Checkout = (TextView) view.findViewById(R.id.checkout);
         getFragmentManager().beginTransaction().add(R.id.RentalContainer, new RentalCheckInFragment()).commit();
         CheckinChecked();
 
@@ -44,6 +43,7 @@ public class RentalActivity extends AppCompatActivity {
                 CheckinChecked();
             }
         });
+        return view;
     }
 
     private void CheckinChecked() {
