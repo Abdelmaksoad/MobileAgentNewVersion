@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 sharedPreferences.getString("Mail", ""),
                 sharedPreferences.getString("ClientID", ""),
                 sharedPreferences.getString("Password", ""));
-        Call<AdminLoginResponse> adminCall = restAPI.adminLogin(adminLoginRequest);
+        Call<AdminLoginResponse> adminCall = restAPI.AdminLogin(adminLoginRequest);
         adminCall.enqueue(new Callback<AdminLoginResponse>() {
             @Override
             public void onResponse(Call<AdminLoginResponse> call, Response<AdminLoginResponse> response) {

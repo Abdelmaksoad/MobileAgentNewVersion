@@ -11,6 +11,7 @@
         android:layout_weight="1">
 
         <EditText
+            android:id="@+id/checkoutReservation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -29,6 +30,7 @@
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/checkoutNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

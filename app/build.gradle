@@ -18,15 +18,6 @@ android {
         }
     }
 }
-
-
-
-
-
-
-
-
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -43,4 +34,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.github.markushi:circlebutton:1.1'
+    compile 'com.xw.repo:bubbleseekbar:3.9-lite'
 }

@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                 progressDialog.show();
                 restAPI = RetrofitService.getLoginService().create(RestAPI.class);
                 LoginRequest loginRequest = new LoginRequest(mail.getText().toString(), password.getText().toString());
-                Call<LoginResponse> call = restAPI.login(loginRequest);
+                Call<LoginResponse> call = restAPI.Login(loginRequest);
                 call.enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {

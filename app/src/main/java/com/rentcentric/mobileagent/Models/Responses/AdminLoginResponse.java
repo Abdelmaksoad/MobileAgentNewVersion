@@ -26,7 +26,7 @@ public class AdminLoginResponse {
     private Integer locationID;
     @SerializedName("StatusInfo")
     @Expose
-    private ResponseStatus statusInfo;
+    private StatusInfo statusInfo;
 
     public String getAdminId() {
         return adminId;
@@ -68,11 +68,11 @@ public class AdminLoginResponse {
         this.locationID = locationID;
     }
 
-    public ResponseStatus getStatusInfo() {
+    public StatusInfo getStatusInfo() {
         return statusInfo;
     }
 
-    public void setStatusInfo(ResponseStatus statusInfo) {
+    public void setStatusInfo(StatusInfo statusInfo) {
         this.statusInfo = statusInfo;
     }
 }

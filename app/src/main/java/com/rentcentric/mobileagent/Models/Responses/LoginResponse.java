@@ -17,7 +17,7 @@ public class LoginResponse {
     private String serverName;
     @SerializedName("Status")
     @Expose
-    private ResponseStatus status;
+    private StatusInfo status;
 
     public Integer getClientID() {
         return clientID;
@@ -35,11 +35,11 @@ public class LoginResponse {
         this.serverName = serverName;
     }
 
-    public ResponseStatus getStatus() {
+    public StatusInfo getStatus() {
         return status;
     }
 
-    public void setStatus(ResponseStatus status) {
+    public void setStatus(StatusInfo status) {
         this.status = status;
     }
 }
